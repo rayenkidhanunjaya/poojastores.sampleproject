@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 
 WORKDIR /app
-RUN mkdir /app
+COPY . /app
 RUN cp -R ./publish/* /app
 RUN dotnet build
 EXPOSE 80
